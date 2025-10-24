@@ -1,0 +1,13 @@
+# Magisk Module Installer Script
+
+ui_print "*******************************"
+ui_print "        FridaOnBoot v1.0        "
+ui_print "   by Harith Dilshan (h4rithd)   "
+ui_print "*******************************"
+ui_print "- Installing frida-server binary..."
+
+# Set correct permissions for the binary
+# set_perm_recursive [path] [owner] [group] [dir_perm] [file_perm]
+set_perm_recursive $MODPATH/system/bin 0 0 0755 0755
+
+ui_print "- Permissions set. Module enabled."

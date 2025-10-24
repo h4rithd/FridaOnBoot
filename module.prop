@@ -1,0 +1,6 @@
+id=FridaOnBoot
+name=FridaOnBoot
+version=v1.0
+versionCode=1
+author=Harith Dilshan(h4rithd.com)
+description=A simple module to automatically run frida-server at boot for security research.
