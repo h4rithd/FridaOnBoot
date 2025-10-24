@@ -6,8 +6,13 @@ ui_print "   by Harith Dilshan (h4rithd)   "
 ui_print "*******************************"
 ui_print "- Installing frida-server binary..."
 
-# Set correct permissions for the binary
-# set_perm_recursive [path] [owner] [group] [dir_perm] [file_perm]
+# Set perms for binary dir and contents
 set_perm_recursive $MODPATH/system/bin 0 0 0755 0755
+
+ui_print "- Setting script permissions..."
+
+# Set perms for executable scripts
+set_perm $MODPATH/service.sh 0 0 0755
+set_perm $MODPATH/module.prop 0 0 0755
 
 ui_print "- Permissions set. Module enabled."

@@ -4,3 +4,14 @@ version=v1.0
 versionCode=1
 author=Harith Dilshan(h4rithd.com)
 description=A simple module to automatically run frida-server at boot for security research.
+
+# Dynamic status logic
+# This script runs to check the service and update the description above.
+
+if pgrep -f "frida-server" > /dev/null; then
+  # If frida-server is running, set this description
+  echo "description=✅ Status: Running | Auto-runs frida-server at boot."
+else
+  # If frida-server is NOT running, set this description
+  echo "description=❗ Status: Stopped | Auto-runs frida-server at boot."
+fi

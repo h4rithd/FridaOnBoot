@@ -19,3 +19,7 @@ This module is designed for penetration testers and developers who frequently us
 ## 🛠️ Installation & Configuration
 
 ## Usage
+
+```
+zip -r9 ../FridaOnBoot.zip ./*
+```
